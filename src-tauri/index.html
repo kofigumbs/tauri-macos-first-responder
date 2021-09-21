@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+Pressing a key on your keyboard should turn this button red —
+<button style="background:blue">Blue</button>
+<script>
+  document.addEventListener('keypress', event => {
+    event.preventDefault();
+    const button = document.querySelector('button')
+    button.innerText = 'Red';
+    button.style.background = 'red';
+  });
+</script>
