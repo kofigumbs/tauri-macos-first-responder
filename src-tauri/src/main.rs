@@ -1,11 +1,11 @@
-#[allow(unused_variables)]
+#![allow(unused_variables)]
+
 use tauri::{Event, Manager};
 
 fn main() {
   let app = tauri::Builder::default()
     .build(tauri::generate_context!())
     .expect("error while building tauri application");
-  #[allow(unused_variables)]
   app.run(|handle, event| match event {
     #[cfg(all(target_os = "macos", feature = "make-first-responder"))]
     Event::Ready => {
